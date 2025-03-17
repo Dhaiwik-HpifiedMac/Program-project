@@ -1,1 +1,18 @@
-
+import turtle
+import random
+t = turtle.Turtle()
+t.goto(0,0)
+x = 1
+screen = turtle.Screen()
+t.left(90)
+jump = 50
+def move_forward():
+  t.penup()
+  t.forward(jump)
+  t.backward(jump)
+  t.pendown()
+  
+while(x == 1):
+  screen.onkey(move_forward, "Up")
+  screen.listen()
+  screen.done
