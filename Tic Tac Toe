@@ -1,0 +1,95 @@
+u11 = "#"
+u12 = "#"
+u13 = "#"
+u21 = "#"
+u22 = "#"
+u23 = "#"
+u31 = "#"
+u32 = "#"
+u33 = "#"
+x = 1
+turn = 1
+row = input("Which row would you like to place your piece in?  ")
+column = input("Which column would you like to place your piece in?  ")
+def board():
+  print(u11,u12,u13)
+  print(u21,u22,u23)
+  print(u31,u32,u33)
+for i in range(9):
+  if row == "1" and column == "1" and u11 == "#":
+    if(turn%2==1):
+      u11 = "X"
+    else:
+      u11 = "O"
+  elif row == "1" and column == "2" and u12 == "#":
+    if(turn%2==1):
+      u12 = "X"
+    else:
+      u12 = "O"
+  elif row == "1" and column == "3" and u13 == "#":
+    if(turn%2==1):
+      u13 = "X"
+    else:
+      u13 = "O"
+  elif row == "2" and column == "1" and u21 == "#":
+    if(turn%2==1):
+      u21 = "X"
+    else:
+      u21 = "O"
+  elif row == "2" and column == "2" and u22 == "#":
+    if(turn%2==1):
+      u22 = "X"
+    else:
+      u22 = "O"
+  elif row == "2" and column == "3" and u23 == "#":
+    if(turn%2==1):
+      u23 = "X"
+    else:
+      u23 = "O"
+  elif row == "3" and column == "1" and u31 == "#":
+    if(turn%2==1):
+      u31 = "X"
+    else:
+      u31 = "O"
+  elif row == "3" and column == "2" and u32 == "#":
+    if(turn%2==1):
+      u32 = "X"
+    else:
+      u32 = "O"
+  elif row == "3" and column == "3" and u33 == "#":
+    if(turn%2==1):
+      u33 = "X"
+    else:
+      u33 = "O"
+  else:
+   print("Invaild row and/or column")
+   exit()
+  x+=1
+  turn+=1
+  board()
+  if(u11 == u12 and u11 == u13 and not(u11 == "#")):
+    print(u11,"wins!")
+    exit()
+  elif(u21 == u22 and u21 == u23 and not(u21 == "#")):
+    print(u21,"wins!")
+    exit()
+  elif(u31 == u32 and u31 == u33 and not(u31 == "#")):
+    print(u31,"wins!")
+    exit()
+  elif(u11 == u21 and u11 == u31 and not(u11 == "#")):
+    print(u11,"wins!")
+    exit()
+  elif(u12 == u22 and u12 == u32 and not(u12 == "#")):
+    print(u12,"wins!")
+    exit()
+  elif(u13 == u23 and u13 == u33 and not(u13 == "#")):
+    print(u13,"wins!")
+    exit()
+  elif(u11 == u22 and u11 == u33 and not(u11 == "#")):
+    print(u11,"wins!")
+    exit()
+  elif(u13 == u22 and u13 == u31 and not(u13 == "#")):
+     print(u13,"wins!")
+     exit()
+  row = input("Which row would you like to place your piece in?  ")
+  column = input("Which column would you like to place your piece in?  ")
